@@ -81,20 +81,3 @@
 .operator {
   color: var(--font-color2);
 }
-
-@media screen and (max-width: 480px) {
-  .calculator {
-    width: 350px;
-    gap: 1px;
-    padding: 5px;
-  }
-
-  .buttons {
-    height: 50px;
-    width: 50px;
-  }
-
-  #display {
-    height: 80px;
-  }
-}
