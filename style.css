@@ -21,11 +21,6 @@
 }
 
 .calculator {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
   height: 800px;
   width: 450px;
   padding: 10px;
@@ -35,9 +30,8 @@
 }
 
 .display {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  height: 100px;
+  display: block;
+  height: 30%;
   background-color: var(--background);
   color: var(--font-color1);
   font-family: sans-serif;
@@ -45,6 +39,15 @@
   text-align: right;
   border: none;
   outline: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  /* height: 90%; */
+  justify-content: center;
+  align-items: end;
 }
 
 .buttons {
@@ -80,4 +83,23 @@
 
 .operator {
   color: var(--font-color2);
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+  .calculator {
+    height: 650px;
+    width: 350px;
+    box-shadow: none;
+  }
+
+  .display {
+    height: 35%;
+    width: 90%;
+  }
+
+  .buttons {
+    height: 70px;
+    width: 70px;
+  }
 }
