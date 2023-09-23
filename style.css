@@ -1,0 +1,100 @@
+/* Colors */
+:root {
+  --background: #010101;
+  --background-button: #171717;
+  --background-button-active: #444;
+  --background-equals: #318607;
+  --background-equals-active: #599d38;
+  --font-color1: #fafafa;
+  --font-color2: #6bd239;
+  --font-color3: #fe7674;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+  width: 450px;
+  padding: 10px;
+  background-color: var(--background);
+  border-radius: 10px;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.200);
+}
+
+.display {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  height: 100px;
+  background-color: var(--background);
+  color: var(--font-color1);
+  font-family: sans-serif;
+  font-size: 2rem;
+  text-align: right;
+  border: none;
+  outline: none;
+}
+
+.buttons {
+  height: 100px;
+  width: 100px;
+  background-color: var(--background-button);
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--font-color1);
+  border-radius: 50%;
+  border: none;
+  outline: none;
+}
+
+.buttons:active {
+  background-color: var(--background-button-active);
+}
+
+.equals {
+  background-color: var(--background-equals);
+}
+
+.equals:active {
+  background-color: var(--background-equals-active);
+}
+
+.clear{
+  color: var(--font-color3);
+}
+
+.operator {
+  color: var(--font-color2);
+}
+
+@media screen and (max-width: 480px) {
+  .calculator {
+    width: 350px;
+    gap: 1px;
+    padding: 5px;
+  }
+
+  .buttons {
+    height: 50px;
+    width: 50px;
+  }
+
+  #display {
+    height: 80px;
+  }
+}
